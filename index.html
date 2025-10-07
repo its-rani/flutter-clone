@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match the design */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Custom gradient for the hero background */
+        .hero-gradient {
+            background-image: radial-gradient(circle at 10% 20%, rgba(253, 226, 255, 0.4) 0%, rgba(255, 255, 255, 0) 40%),
+                              radial-gradient(circle at 90% 80%, rgba(226, 239, 255, 0.4) 0%, rgba(255, 255, 255, 0) 50%);
+        }
+        /* Custom gradient for the consultants section */
+        .consultants-gradient {
+            background-image: radial-gradient(circle at 5% 5%, rgba(255, 240, 200, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
+        }
+        /* Custom gradient for the packages section */
+        .packages-gradient {
+            background-image: radial-gradient(circle at 95% 5%, rgba(220, 255, 240, 0.4) 0%, rgba(255, 255, 255, 0) 60%);
+        }
+        /* Custom background for the final CTA */
+        .cta-bg {
+            background-color: #0C1D3D;
+            background-image: 
+                radial-gradient(circle at 100% 0%, rgba(5, 83, 177, 0.5) 0%, rgba(12, 29, 61, 0) 50%);
+        }
+        /* Style for the underlined active nav link */
+        .nav-link-active {
+            text-decoration: underline;
+            text-decoration-color: #0553B1;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 6px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <div class="bg-blue-600 text-white text-center p-2 text-sm">
+        <span>Flutter 3.35 and Dart 3.9 are here! <a href="#" class="font-semibold underline">Learn more →</a></span>
+    </div>
+
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                 <svg width="36" height="36" viewBox="0 0 122 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M72.2622 0.737793L10.916 62.084L32.0622 83.2302L121.262 0.737793H72.2622Z" fill="#02569B"/>
+                    <path d="M72.2622 47.5737L32.0622 87.7737L53.2085 108.92L72.2622 91.5659V47.5737Z" fill="#02569B"/>
+                    <path d="M53.2085 108.92L121.262 40.8657V89.8657L72.2622 108.92H53.2085Z" fill="#0175C2"/>
+                    <path d="M32.062 83.2305L10.916 62.084L72.262 0.737793L93.4082 21.884L32.062 83.2305Z" fill="#40C4FF"/>
+                 </svg>
+                <span class="text-2xl font-bold text-gray-800">Flutter</span>
+            </div>
+
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#" class="text-gray-600 hover:text-blue-600">Multi-Platform</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Development</a>
+                <a href="#" class="text-blue-700 font-semibold nav-link-active">Ecosystem</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Showcase</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Docs</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Blog</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-500 hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <a href="#" class="hidden sm:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                    Get started
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-gradient">
+        <div class="container mx-auto px-6 py-16 lg:py-24">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-gray-900">
+                        A strong ecosystem, powered by open source
+                    </h1>
+                </div>
+
+                <div class="relative w-full aspect-square max-w-lg mx-auto">
+                    <svg class="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M200 20 C280 20 380 120 380 200 S280 380 200 380" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8"/>
+                        <path d="M200 20 C120 20 20 120 20 200 S120 380 200 380" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8"/>
+                    </svg>
+
+                    <div class="absolute top-[20%] left-[25%] transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white p-6 rounded-2xl shadow-lg w-48 text-center transition-transform hover:scale-105">
+                        <p class="text-4xl font-bold">1M+</p>
+                        <p class="mt-1 text-sm">apps created</p>
+                    </div>
+
+                    <div class="absolute top-[55%] right-[-5%] transform -translate-y-1/2 bg-blue-900 text-white p-6 rounded-2xl shadow-lg w-48 text-center transition-transform hover:scale-105">
+                        <p class="text-4xl font-bold">25k+</p>
+                        <p class="mt-1 text-sm">Flutter & Dart packages</p>
+                    </div>
+
+                    <div class="absolute bottom-[-5%] left-[35%] transform -translate-x-1/2 bg-green-400 text-white p-6 rounded-2xl shadow-lg w-48 text-center transition-transform hover:scale-105">
+                        <p class="text-4xl font-bold">3rd</p>
+                        <p class="mt-1 text-sm">most OSS GitHub contributors</p>
+                    </div>
+                    
+                    <div class="absolute top-[10%] right-[15%] transform translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-110">
+                         <div class="relative w-24 h-24">
+                             <img src="https://placehold.co/100x100/000000/FFFFFF?text=Dev" class="rounded-full w-full h-full object-cover border-4 border-white shadow-md" alt="Developer 1">
+                         </div>
+                    </div>
+
+                    <div class="absolute bottom-[10%] right-[10%] transform translate-x-1/2 translate-y-1/2 transition-transform hover:scale-110">
+                        <img src="https://placehold.co/120x120/000000/FFFFFF?text=Dev" class="rounded-full w-28 h-28 object-cover border-4 border-white shadow-md" alt="Developer 2">
+                    </div>
+                    
+                    <div class="absolute top-[40%] left-[5%] transform -translate-x-1/2 -translate-y-1/2 text-red-500 drop-shadow-lg transition-transform hover:scale-125">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                     <div class="absolute top-[65%] left-[60%] transform -translate-x-1/2 -translate-y-1/2 text-red-500 drop-shadow-lg transition-transform hover:scale-125">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6">
+             <p class="text-center text-2xl md:text-3xl max-w-4xl mx-auto text-gray-700 leading-snug">
+                From packages and plugins to friendly developers, find all of the resources you need to be successful with Flutter.
+            </p>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Community</h2>
+                    <p class="text-gray-600 mb-6">Join developers around the world who are building with Flutter.</p>
+                    <img src="community.e90928160cc43359f8f6.jpg" alt="Community Graphic" class="rounded-lg shadow-md mx-auto md:mx-0">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Events</h2>
+                    <p class="text-gray-600 mb-6">Learn about the latest Flutter developments at our global events.</p>
+                     <img src="events.bb151b932844205ac418.jpg" alt="Events Graphic" class="rounded-lg shadow-md mx-auto md:mx-0">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Packages</h2>
+                    <p class="text-gray-600 mb-6">Find open source packages to help you build powerful Flutter apps.</p>
+                     <img src="packages.aa60c7e0fff5f6fdbda7.png" alt="Packages Graphic" class="rounded-lg shadow-md mx-auto md:mx-0">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-center lg:text-left">
+                    <p class="text-lg font-semibold text-gray-700 mb-2">Community</p>
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Get involved</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed max-w-lg">
+                        Connect with Flutter developers around the world, find answers, and contribute to the framework in our welcoming community spaces.
+                    </p>
+                     <div class="flex items-center justify-center lg:justify-start space-x-4">
+                         <a href="#" class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">
+                             Join the community
+                         </a>
+                         <a href="#" class="font-semibold text-blue-600 hover:underline">
+                             More about Flutter culture →
+                         </a>
+                     </div>
+                </div>
+                <div class="text-center">
+                    <img src="community-get-involved.c6d00c92ea8465787105.png" alt="Get Involved Graphic" class="max-w-full h-auto rounded-lg mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="consultants-gradient py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-center">
+                    <img src="consultants.5ed8ae4a516b4433fc75.png" alt="Flutter Consultants" class="max-w-full h-auto rounded-lg mx-auto">
+                </div>
+                <div>
+                    <p class="text-lg font-semibold text-gray-700 mb-2">Consultants</p>
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Find a Flutter consultant</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Find trusted Flutter partners. We vet the partners listed in the directory to verify their record of successful Flutter projects, a sufficient number of skilled developers on staff, and their commitment to growing the Flutter community.
+                    </p>
+                    <a href="#" class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
+                        Find Consultants
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-center lg:text-left">
+                    <p class="text-lg font-semibold text-gray-700 mb-2">Events</p>
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Everyone is invited</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        View upcoming events and see all of the latest talks and announcements from previous events.
+                    </p>
+                    <a href="#" class="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">
+                        See events
+                    </a>
+                </div>
+                <div class="text-center">
+                    <img src="everyone-is-invited.6f183a9db312d0e1b535.png" alt="Events Calendar" class="max-w-full h-auto rounded-lg mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="packages-gradient py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                 <div class="text-center lg:order-last">
+                     <img src="packages-integrations.9e16544e02c158492997.png" alt="Packages and Integrations" class="max-w-full h-auto rounded-lg mx-auto">
+                </div>
+                <div class="lg:order-first">
+                    <p class="text-lg font-semibold text-gray-700 mb-2">Packages & Integrations</p>
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Find what you need on pub.dev</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Browse over 20,000 packages, plugins, and integrations for custom UI components, authentication solutions, state management libraries, and more.
+                    </p>
+                    <a href="#" class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
+                        Explore packages
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="cta-bg text-white p-12 lg:p-16 rounded-3xl">
+                <div class="max-w-xl">
+                    <h2 class="text-5xl font-extrabold mb-4">Get started</h2>
+                    <p class="text-lg text-blue-200 mb-8">
+                        Instant access to the power of the Flutter framework
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition-colors">
+                            Install
+                        </a>
+                        <a href="#" class="font-semibold text-white hover:underline">
+                            Read the docs →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 text-gray-700">
+        <div class="container mx-auto px-6 pt-16 pb-8">
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                <div class="sm:col-span-2 md:col-span-4 lg:col-span-1">
+                    <div class="flex items-center space-x-2">
+                        <svg width="30" height="30" viewBox="0 0 122 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M72.2622 0.737793L10.916 62.084L32.0622 83.2302L121.262 0.737793H72.2622Z" fill="#02569B"/>
+                            <path d="M72.2622 47.5737L32.0622 87.7737L53.2085 108.92L72.2622 91.5659V47.5737Z" fill="#02569B"/>
+                            <path d="M53.2085 108.92L121.262 40.8657V89.8657L72.2622 108.92H53.2085Z" fill="#0175C2"/>
+                            <path d="M32.062 83.2305L10.916 62.084L72.262 0.737793L93.4082 21.884L32.062 83.2305Z" fill="#40C4FF"/>
+                        </svg>
+                       <span class="text-xl font-bold text-gray-800">Flutter</span>
+                   </div>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-gray-900 mb-4">About Flutter</h3>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Careers</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">News</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Brand</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Culture</a>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-gray-900 mb-4">Learn Flutter</h3>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Learning Journey</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Codelabs</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Samples</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Cookbook</a>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-gray-900 mb-4">Multi-Platform</h3>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Mobile</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Web</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Desktop</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">Embedded</a>
+                    <a href="#" class="block mb-2 hover:text-blue-600">iOS</a>
+                </div>
+            </div>
+
+            <div class="mt-12 flex space-x-5">
+                <a href="#" class="text-gray-500 hover:text-gray-900">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.506 2.506 0 0 1-1.768 1.768c-1.594.42-7.812.42-7.812.42s-6.218 0-7.812-.42a2.506 2.506 0 0 1-1.768-1.768C2 15.22 2 12 2 12s0-3.22.42-4.814a2.506 2.506 0 0 1 1.768-1.768C5.782 5 12 5 12 5s6.218 0 7.812.418ZM15.194 12 10 8.814v6.372L15.194 12Z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                </a>
+                </div>
+
+            <div class="mt-12 border-t border-gray-200 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                    <p class="text-gray-500 text-center md:text-left mb-4 md:mb-0">
+                        Except as otherwise noted, this work is licensed under a Creative Commons Attribution 4.0 International License, and code samples are licensed under the BSD License.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:underline">Terms</a>
+                        <a href="#" class="hover:underline">Privacy</a>
+                        <a href="#" class="hover:underline">Security</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
